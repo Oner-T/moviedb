@@ -27,11 +27,18 @@ const Body = () => {
       <div className={styles.main}>
         {data?.map((res) => (
           <Card onClick={() => onClick(res.id)} key={res.id}>
-            <img
-              style={{ width: 50 }}
-              src={`https://image.tmdb.org/t/p/w500${res.poster_path}`}
-            />
-            {res.original_title}
+            <img src={`https://image.tmdb.org/t/p/w500${res.poster_path}`} />
+            <div>
+              <p>
+                <span>Title:</span> {res.original_title}
+              </p>
+              <p>
+                <span>Release date:</span> {res.release_date}
+              </p>
+              <p>
+                <span>Rating:</span> {res.vote_average}
+              </p>
+            </div>
           </Card>
         ))}
       </div>

@@ -5,7 +5,7 @@ import Body from '../components/Body';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import store from '../redux/storeConfig/store';
-import styles from '../styles/Home.module.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 const Home = () => {
   return (
       <Provider store={store}>
